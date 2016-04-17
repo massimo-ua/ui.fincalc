@@ -1,0 +1,49 @@
+<div class="well">
+<div class="row">
+	<div class="col-sm-3">
+		<span>Products <span class="badge">{{numberOfProducts}}</span>
+    <button ng-click="removeProduct()" ng-disabled="numberOfProducts <= minNumberOfProducts" type="button" class="btn btn-fab btn-fab-mini">
+          <span title="Remove Product">-</span>
+    </button>
+    <button ng-disabled="numberOfProducts >= maxNumberOfProducts" ng-click="addProduct()" type="button" class="btn btn-fab btn-fab-mini">
+          <span title="Add Product">+</span>
+    </button>
+	</div>
+</div>
+<ng-form id="products" name="products" >
+<div class="row" ng-repeat="i in [] | range: numberOfProducts">
+<table class="table table-striped table-hover">
+  <thead>
+  <tr>
+  	<th>Product #{{i}}</th>
+    <th ng-repeat="y in [] | range: rangeInYears track by $index">{{ startYear + $index }}</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  	<td nowrap>Forcasted sales</td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="hs" type="text" ng-model="products.data[i].fs[j]"></td>
+  </tr>
+    <tr>
+  	<td nowrap>Forcased production units</td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="hpu" type="text" ng-model="products.data[i].fpu[j]"></td>
+  </tr>
+  </tbody>
+</table>
+</div>
+<div class="row">
+<div class="form-group">
+        <div class="col-sm-12">
+          <button type="submit" class="btn btn-success" ng-disabled="Form.$invalid">Save Input</button>
+        </div>
+      </div>
+      </div>
+    </ng-form>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<div class="well">
+  			{{ products }}
+		</div>
+	</div>
+</div>
