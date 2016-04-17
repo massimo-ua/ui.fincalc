@@ -1,0 +1,52 @@
+<div class="well">
+<ng-form id="debt" name="debt" >
+<table class="table table-striped table-hover">
+  <thead>
+  <tr>
+  	<th>Index Name</th>
+    <th ng-repeat="y in [] | range: rangeInYears track by $index">{{ startYear + $index }}</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  	<td nowrap>Additional borrowing / (pay down)</td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="abpd" type="text" ng-model="debt.data.abpd[j]"></td>
+  </tr>
+  <tr>
+    <td nowrap>PIK accrual</td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="pika" type="text" ng-model="debt.data.pika[j]"></td>
+  </tr>
+  <tr>
+    <td nowrap>Interest expense on long term debt</td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="ieltd" type="text" ng-model="debt.data.ieltd[j]"></td>
+  </tr>
+  <tr>
+    <td nowrap>Interest expense paid in cash (%)</td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="pciepc" type="text" ng-model="debt.data.pciepc[j]"></td>
+  </tr>
+  <tr>
+    <td nowrap>Revolver minimum cash desired</td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="rmcd" type="text" ng-model="debt.data.rmcd[j]"></td>
+  </tr>
+  <tr>
+    <td nowrap>Interest rate on revolver (%)</td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="irr" type="text" ng-model="debt.data.irr[j]"></td>
+  </tr>
+  </tbody>
+</table>
+<div class="row">
+<div class="form-group">
+        <div class="col-sm-12">
+          <button type="submit" class="btn btn-success" ng-disabled="Form.$invalid">Save Input</button>
+        </div>
+      </div>
+      </div>
+    </ng-form>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<div class="well">
+  			{{ debt }}
+		</div>
+	</div>
+</div>
