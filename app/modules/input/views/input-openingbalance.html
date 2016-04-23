@@ -1,5 +1,5 @@
 <div class="well">
-<ng-form id="openingbalance" name="openingbalance" >
+<ng-form id="ob" name="ob" >
 <table class="table table-striped table-hover">
   <thead>
   <tr>
@@ -10,82 +10,82 @@
   <tbody>
   <tr>
   	<td nowrap>Cash & equivalents ST & LT market. securities</td>
-    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="cstlts" type="text" ng-model="openingbalance.data.cstlts[j]" ng-disabled="(startYear + j - 1) >= currentYear"></td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="InOBCashAndEquivalentsSTandLTMarketSecurities" type="text" ng-model="ob.data[startYear + j - 1].InOBCashAndEquivalentsSTandLTMarketSecurities" ng-disabled="(startYear + j - 1) >= currentYear"></td>
   </tr>
   <tr>
     <td nowrap>Accounts receivable</td>
-    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="accr" type="text" ng-model="openingbalance.data.accr[j]" ng-disabled="(startYear + j - 1) >= currentYear"></td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="InOBAccountsReceivable" type="text" ng-model="ob.data[startYear + j - 1].InOBAccountsReceivable" ng-disabled="(startYear + j - 1) >= currentYear"></td>
   </tr>
   <tr>
     <td nowrap>Inventory</td>
-    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="inventory" type="text" ng-model="openingbalance.data.inventory[j]" ng-disabled="(startYear + j - 1) >= currentYear"></td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="InOBInventory" type="text" ng-model="ob.data[startYear + j - 1].InOBInventory" ng-disabled="(startYear + j - 1) >= currentYear"></td>
   </tr>
   <tr>
     <td nowrap>Deferred tax assets</td>
-    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="dta" type="text" ng-model="openingbalance.data.dta[j]" ng-disabled="(startYear + j - 1) >= currentYear"></td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="InOBDeferredTaxAssets" type="text" ng-model="ob.data[startYear + j - 1].InOBDeferredTaxAssets" ng-disabled="(startYear + j - 1) >= currentYear"></td>
   </tr>
   <tr>
     <td nowrap>Other current assets (inc. non-trade receivables)</td>
-    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="oca" type="text" ng-model="openingbalance.data.oca[j]" ng-disabled="(startYear + j - 1) >= currentYear"></td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="InOBOtherCurrentAssets" type="text" ng-model="ob.data[startYear + j - 1].InOBOtherCurrentAssets" ng-disabled="(startYear + j - 1) >= currentYear"></td>
   </tr>
   <tr>
     <td nowrap>Property, plant & equipment</td>
-    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="ppe" type="text" ng-model="openingbalance.data.ppe[j]" ng-disabled="(startYear + j - 1) >= currentYear"></td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="InOBPropertyPlantAndEquipment" type="text" ng-model="ob.data[startYear + j - 1].InOBPropertyPlantAndEquipment" ng-disabled="(startYear + j - 1) >= currentYear"></td>
   </tr>
   <tr>
     <td nowrap>Acquired intangible assets (inc. Goodwill)</td>
-    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="aia" type="text" ng-model="openingbalance.data.aia[j]" ng-disabled="(startYear + j - 1) >= currentYear"></td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="InOBAcquiredIntangibleAssets" type="text" ng-model="ob.data[startYear + j - 1].InOBAcquiredIntangibleAssets" ng-disabled="(startYear + j - 1) >= currentYear"></td>
   </tr>
   <tr>
     <td nowrap>Other assets</td>
-    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="oa" type="text" ng-model="openingbalance.data.oa[j]" ng-disabled="(startYear + j - 1) >= currentYear"></td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="InOBOtherAssets" type="text" ng-model="ob.data[startYear + j - 1].InOBOtherAssets" ng-disabled="(startYear + j - 1) >= currentYear"></td>
   </tr>
   <tr>
     <td nowrap>Accounts payable</td>
-    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="ap" type="text" ng-model="openingbalance.data.ap[j]" ng-disabled="(startYear + j - 1) >= currentYear"></td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="InOBAccountsPayable" type="text" ng-model="ob.data[startYear + j - 1].InOBAccountsPayable" ng-disabled="(startYear + j - 1) >= currentYear"></td>
   </tr>
   <tr>
     <td nowrap>Accrued expenses & def rev. (current & non-current)</td>
-    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="aedr" type="text" ng-model="openingbalance.data.aedr[j]" ng-disabled="(startYear + j - 1) >= currentYear"></td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="InOBAccruedExpensesAndDefRev" type="text" ng-model="ob.data[startYear + j - 1].InOBAccruedExpensesAndDefRev" ng-disabled="(startYear + j - 1) >= currentYear"></td>
   </tr>
   <tr>
     <td nowrap>Revolver</td>
-    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="revolver" type="text" ng-model="openingbalance.data.revolver[j]"></td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="InOBRevolver" type="text" ng-model="ob.data[startYear + j - 1].InOBRevolver"></td>
   </tr>
   <tr>
     <td nowrap>Long term debt</td>
-    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="ltd" type="text" ng-model="openingbalance.data.ltd[j]" ng-disabled="(startYear + j - 1) >= currentYear"></td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="InOBLongTermDebt" type="text" ng-model="ob.data[startYear + j - 1].InOBLongTermDebt" ng-disabled="(startYear + j - 1) >= currentYear"></td>
   </tr>
   <tr>
     <td nowrap>Other non-current liabilities</td>
-    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="oncl" type="text" ng-model="openingbalance.data.oncl[j]" ng-disabled="(startYear + j - 1) >= currentYear"></td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="InOBOtherNonCurrentLiabilities" type="text" ng-model="ob.data[startYear + j - 1].InOBOtherNonCurrentLiabilities" ng-disabled="(startYear + j - 1) >= currentYear"></td>
   </tr>
   <tr>
     <td nowrap>Common stock / additional paid in capital</td>
-    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="csapc" type="text" ng-model="openingbalance.data.csapc[j]" ng-disabled="(startYear + j - 1) >= currentYear"></td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="InOBCommonStockOrAdditionalPaidInCapital" type="text" ng-model="ob.data[startYear + j - 1].InOBCommonStockOrAdditionalPaidInCapital" ng-disabled="(startYear + j - 1) >= currentYear"></td>
   </tr>
   <tr>
     <td nowrap>Treasury stock</td>
-    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="ts" type="text" ng-model="openingbalance.data.ts[j]" ng-disabled="(startYear + j - 1) >= currentYear"></td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="InOBTreasuryStock" type="text" ng-model="ob.data[startYear + j - 1].InOBTreasuryStock" ng-disabled="(startYear + j - 1) >= currentYear"></td>
   </tr>
   <tr>
     <td nowrap>Retained earnings / accumulated deficit</td>
-    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="read" type="text" ng-model="openingbalance.data.read[j]" ng-disabled="(startYear + j - 1) >= currentYear"></td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="InOBRetainedEarningsOrAccumulatedDeficit" type="text" ng-model="ob.data[startYear + j - 1].InOBRetainedEarningsOrAccumulatedDeficit" ng-disabled="(startYear + j - 1) >= currentYear"></td>
   </tr>
   <tr>
     <td nowrap>Other comprehensive income / (loss)</td>
-    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="oci" type="text" ng-model="openingbalance.data.oci[j]" ng-disabled="(startYear + j - 1) >= currentYear"></td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="InOBOtherComprehensiveIncomeOrLoss" type="text" ng-model="ob.data[startYear + j - 1].InOBOtherComprehensiveIncomeOrLoss" ng-disabled="(startYear + j - 1) >= currentYear"></td>
   </tr>
   <tr>
     <td nowrap>Market share price</td>
-    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="msp" type="text" ng-model="openingbalance.data.msp[j]" ng-disabled="(startYear + j - 1) >= currentYear"></td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="InOBMarketSharePrice" type="text" ng-model="ob.data[startYear + j - 1].InOBMarketSharePrice" ng-disabled="(startYear + j - 1) >= currentYear"></td>
   </tr>
   </tbody>
 </table>
 <div class="row">
 <div class="form-group">
         <div class="col-sm-12">
-          <button type="submit" class="btn btn-success" ng-disabled="Form.$invalid">Save Input</button>
+          <button type="submit" class="btn btn-success" ng-disabled="Form.$invalid">Next</button>
         </div>
       </div>
       </div>
@@ -94,7 +94,7 @@
 <div class="row">
 	<div class="col-sm-12">
 		<div class="well">
-  			{{ openingbalance }}
+  			{{ ob }}
 		</div>
 	</div>
 </div>

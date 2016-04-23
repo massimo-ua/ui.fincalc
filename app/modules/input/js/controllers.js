@@ -36,7 +36,7 @@ angular.module('calcApp.input.controllers', [])
 	$scope.startYear = InputParams.StartYear();
 }])
 .controller('WorkingCapitalInputController', ['$scope', 'InputParams', function($scope, InputParams){
-	$scope.workingcapital = {};
+	$scope.wc = {};
 	$scope.rangeInYears = InputParams.ForecastRangeInYears();
 	$scope.startYear = InputParams.StartYear();
 }])
@@ -61,7 +61,7 @@ angular.module('calcApp.input.controllers', [])
 	$scope.startYear = InputParams.StartYear();
 }])
 .controller('OpeningBalanceInputController', ['$scope', 'InputParams', function($scope, InputParams){
-	$scope.openingbalance = {};
+	$scope.ob = {};
 	$scope.rangeInYears = InputParams.ForecastRangeInYears();
 	$scope.startYear = InputParams.StartYear();
 	$scope.currentYear = InputParams.CurrentYear();
