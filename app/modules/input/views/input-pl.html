@@ -10,11 +10,11 @@
   <tbody>
   <tr>
   	<td nowrap>Blended tax rate (%)</td>
-    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="InPLBlendedTaxRate" type="text" ng-model="pl.data[j].InPLBlendedTaxRate"></td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="InPLBlendedTaxRate" type="text" ng-model="pl.data[startYear + j - 1].InPLBlendedTaxRate"></td>
   </tr>
   <tr>
     <td nowrap>Other comprehensive income/loss</td>
-    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="InPLOtherComprehensiveIncomeOrLoss" type="text" ng-model="pl.data[j].InPLOtherComprehensiveIncomeOrLoss"></td>
+    <td ng-repeat="j in [] | range: rangeInYears track by $index"><input class="form-control table-input" id="InPLOtherComprehensiveIncomeOrLoss" type="text" ng-model="pl.data[startYear + j - 1].InPLOtherComprehensiveIncomeOrLoss"></td>
   </tr>
   </tbody>
 </table>
